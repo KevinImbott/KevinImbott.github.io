@@ -80,10 +80,18 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
+.set-background-image {
+    background-image: url({{ site.baseurl }}/img/kimbott.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 header {
     text-align: center;
     color: #fff;
-    background: #{{ site.color.primary }};
+    /* background: #{{ site.color.primary }}; */
 }
 
 header .container {
@@ -175,6 +183,12 @@ section {
     padding: 100px 0;
 }
 
+
+section.portfolio {
+    color: red;
+    /* Set Backgroun transparent */
+}
+
 section h2 {
     margin: 0;
     font-size: 3em;
@@ -182,7 +196,6 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #{{ site.color.primary }};
 }
 
 @media(max-width:767px) {
@@ -193,6 +206,14 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+#portfolio {
+    /* Setting background semi transparent */
+    margin: 20vh;
+    background: rgba({{ site.color.primary-rgb }},.9);
+    border-radius: 25vh;
+
 }
 
 #portfolio .portfolio-item {
